@@ -4,7 +4,7 @@ function makeGrid(rows, cols) {
     for (let i = 0; i < (rows * cols); i++) {
         const cells = document.createElement('div');
         container.appendChild(cells).className = 'grid-item'; 
-        cells.addEventListener('click', (cell) => {
+        cells.addEventListener('mousedown', (cell) => {
             cell.target.style.backgroundColor = '#354f52';
         });
     };
