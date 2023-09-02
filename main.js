@@ -10,14 +10,19 @@ function clearCanvas() {
     setupGrid(currentSize);
 }
 
+function setSize() {
+    let value = prompt('Enter canvas size:');
+    let size = parseInt(value);
+
+    return size;
+}
+
 function createCanvas() {
-    let changeSize = prompt('Enter canvas size:');
+    let changeSize = setSize();
     if (changeSize > 64) {
         changeSize = 64;
-        const warning = document.createElement('p');
-        warning.textContent = 'Canvas can only max 64px!';
-        header.appendChild(warning);
-    }
+    } 
+
     currentSize = parseInt(changeSize);
     console.log(currentSize);
     grid.innerHTML = '';
