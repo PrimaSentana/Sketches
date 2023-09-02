@@ -21,7 +21,7 @@ function setSize() {
 
 function createCanvas() {
     currentSize = setSize();
-
+    textSize.textContent = `Current size: ${currentSize}`;
     console.log(currentSize);
     
     grid.innerHTML = '';
