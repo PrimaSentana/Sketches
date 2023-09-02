@@ -2,29 +2,33 @@ const grid = document.querySelector('.grid');
 const change_btn = document.querySelector('#change-btn');
 const header = document.querySelector('.header');
 const clear_btn = document.querySelector('#clear');
+const textSize = document.querySelector('.textSize')
 
 let currentSize = 16;
 
-function clearCanvas() {
-    grid.innerHTML = '';
-    setupGrid(currentSize);
-}
-
 function setSize() {
     let value = prompt('Enter canvas size:');
+    if (value > 64) {
+        value = 64;
+    } else if (value === null) {
+        value = currentSize;
+    }
+
     let size = parseInt(value);
 
     return size;
 }
 
 function createCanvas() {
-    let changeSize = setSize();
-    if (changeSize > 64) {
-        changeSize = 64;
-    } 
+    currentSize = setSize();
 
-    currentSize = parseInt(changeSize);
     console.log(currentSize);
+    
+    grid.innerHTML = '';
+    setupGrid(currentSize);
+}
+
+function clearCanvas() {
     grid.innerHTML = '';
     setupGrid(currentSize);
 }
@@ -46,7 +50,3 @@ function setupGrid(size) {
 change_btn.addEventListener('click', (createCanvas));
 
 clear_btn.addEventListener('click', (clearCanvas));
-
-window.onload = () => {
-    createCanvas();
-}
