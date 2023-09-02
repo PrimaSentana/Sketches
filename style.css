@@ -7,29 +7,46 @@
 }
 
 body {
-    background-color: #cad2c5;
+    background-color: #f5ebe0;
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+.header {
     text-align: center;
+    margin-bottom: 12px;
 }
 
-.grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.147);
-    text-align: center;
+.tools {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
 }
 
-.container {
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    width: 960px;
 }
 
-.grid-item {
-    padding: 8px;
+.grid {
+    border: 1px solid #302e2c;
+    display: grid;
+    width: 500px;
+    height: 500px;
 }
 
-.grid-item :hover {
-    background-color: #52796f;
+.grid-items {
+    user-select: none; /* grid item shrinking responsively */
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.079);
 }
