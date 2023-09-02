@@ -1,7 +1,7 @@
 # Sketches
 
-You can like make a pixelart or smth like that
+You can make like a pixel art or smth you like
 
-but it cant be saved to your computer tho 😘
+but it cant be saved to your computer tho.
 
 just draw your random thoughts
