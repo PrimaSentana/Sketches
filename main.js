@@ -24,7 +24,7 @@ function createCanvas() {
     textSize.textContent = `Current size: ${currentSize}`;
     console.log(currentSize);
     
-    grid.innerHTML = '';
+    grid.innerHTML = ''; // clear grid cell
     setupGrid(currentSize);
 }
 
